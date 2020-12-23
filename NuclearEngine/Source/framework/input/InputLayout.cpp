@@ -4,7 +4,7 @@ ne_input::Action& ne_input::InputLayout::addAction(std::string name)
 {
 	_actions.push_back(Action(name));
 
-	_actions.back();
+	return _actions.back();
 }
 
 ne_input::Action& ne_input::InputLayout::getAction(std::string name)
@@ -32,7 +32,7 @@ ne_input::Axis& ne_input::InputLayout::addAxis(std::string name, double lowerBou
 {
 	_axes.push_back(Axis(name, lowerBound, upper_Bound));
 
-	_axes.back();
+	return _axes.back();
 }
 
 ne_input::Axis& ne_input::InputLayout::getAxis(std::string name)

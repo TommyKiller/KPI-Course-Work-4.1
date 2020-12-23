@@ -114,9 +114,6 @@
     <ClInclude Include="Source\framework\input\Action.h">
       <Filter>Файлы заголовков\framework\input</Filter>
     </ClInclude>
-    <ClInclude Include="Source\framework\input\events\ActionEvent.h">
-      <Filter>Файлы заголовков\framework\input\events</Filter>
-    </ClInclude>
     <ClInclude Include="Source\framework\input\events\AxisEvent.h">
       <Filter>Файлы заголовков\framework\input\events</Filter>
     </ClInclude>
@@ -131,6 +128,12 @@
     </ClInclude>
     <ClInclude Include="Source\framework\input\exceptions\AxisDoesNotExistException.h">
       <Filter>Файлы заголовков\framework\input\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\events\ActionEvent.h">
+      <Filter>Файлы заголовков\framework\input\events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\FPSLayout.h">
+      <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -169,6 +172,9 @@
     </ClCompile>
     <ClCompile Include="Source\framework\input\exceptions\AxisDoesNotExistException.cpp">
       <Filter>Исходные файлы\framework\input\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\FPSLayout.cpp">
+      <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

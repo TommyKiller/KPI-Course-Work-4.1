@@ -8,8 +8,8 @@
 // Local Headers
 #include "Bind.h"
 #include "HandleState.h"
-#include "events/ActionEvent.h"
 #include "InputController.h"
+#include "events/ActionEvent.h"
 
 // Define Namespace
 namespace ne_input

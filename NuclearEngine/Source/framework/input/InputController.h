@@ -10,7 +10,9 @@
 #include <unordered_map>
 
 // Local Headers
+#include "Bind.h"
 #include "Mouse.h"
+#include "HandleState.h"
 #include "events/InputEvent.h"
 #include "events/InputControllerEvent.h"
 
@@ -26,7 +28,7 @@ namespace ne_input
 		InputControllerEvent inputController;
 
 		void handleInput(int key, int scancode, int action, int mods);
-		void handleInput(double xpos, double ypos);
+		//void handleInput(double xpos, double ypos);
 		void pollEvents();
 
 	private:

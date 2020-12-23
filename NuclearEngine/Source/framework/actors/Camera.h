@@ -40,6 +40,7 @@ public:
     float MovementSpeed;
     float MouseSensitivity;
     float Zoom;
+    float deltaTime;
 
     // constructor with vectors
     Camera(glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f), float yaw = YAW, float pitch = PITCH) : Front(glm::vec3(0.0f, 0.0f, -1.0f)), MovementSpeed(SPEED), MouseSensitivity(SENSITIVITY), Zoom(ZOOM)
@@ -67,6 +68,18 @@ public:
     }
 
     // processes NEInput received from any keyboard-like NEInput NESystem. Accepts NEInput parameter in the form of camera defined ENUM (to abstract it from windowing systems)
+    void MoveForward(double axisValue)
+    {
+        float velocity = MovementSpeed * axisValue * deltaTime;
+        Position += Front * velocity;
+    }
+
+    void MoveRight(double axisValue)
+    {
+        float velocity = MovementSpeed * axisValue * deltaTime;
+        Position += Right * velocity;
+    }
+    
     void ProcessKeyboard(Camera_Movement direction, float deltaTime)
     {
         float velocity = MovementSpeed * deltaTime;

@@ -8,6 +8,6 @@
 #define PCH_H
 
 // Добавьте сюда заголовочные файлы для предварительной компиляции
-#include <utilities/tk_events/EventDispatcher.h>
+#include "../NuclearEngine/Source/framework/input/InputLayout.h"
 
 #endif //PCH_H

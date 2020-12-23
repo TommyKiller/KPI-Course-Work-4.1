@@ -15,11 +15,13 @@ namespace ne_system
 	class Window
 	{
 	public:
-		static WindowKeyInputEvent keyInput;
-		static WindowAxisInputEvent axisInput;
+		static Window& getInstance();
 
 		static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 		static void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
+
+		WindowKeyInputEvent keyInput;
+		WindowAxisInputEvent axisInput;
 	};
 } // namespace ne_system
 

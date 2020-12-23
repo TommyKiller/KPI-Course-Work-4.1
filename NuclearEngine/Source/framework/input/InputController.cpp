@@ -11,32 +11,73 @@ void ne_input::InputController::handleInput(int key, int scancode, int action, i
 {
 	if (key != GLFW_KEY_UNKNOWN)
 	{
-		if (action == GLFW_PRESS) setPolled(bind(key, mods));
+		if (action == GLFW_PRESS)
+		{
+			setPolled(bind(key, mods));
+		}
 		else if (action == GLFW_RELEASE) setHandled(bind(key, mods));
 	}
 }
 
-void ne_input::InputController::handleInput(double xpos, double ypos)
-{
-	_mouse.position = ne_geom::point2D(xpos, ypos);
-	ne_geom::point2D offset = _mouse.position.offset(_mouse.previous);
-
-	if (offset.x < 0) setPolled(bind(mouse::MOUSE_AXIS_X_LEFT, 0));
-	else if (offset.x > 0) setPolled(bind(mouse::MOUSE_AXIS_X_RIGHT, 0));
-	else if (offset.x == 0)
-	{
-		setHandled(bind(mouse::MOUSE_AXIS_X_LEFT, 0));
-		setHandled(bind(mouse::MOUSE_AXIS_X_RIGHT, 0));
-	}
-
-	if (offset.y > 0) setPolled(bind(mouse::MOUSE_AXIS_Y_UP, 0));
-	else if (offset.y < 0) setPolled(bind(mouse::MOUSE_AXIS_Y_DOWN, 0));
-	else if (offset.y == 0)
-	{
-		setHandled(bind(mouse::MOUSE_AXIS_Y_UP, 0));
-		setHandled(bind(mouse::MOUSE_AXIS_Y_DOWN, 0));
-	}
-}
+//void ne_input::InputController::handleInput(double xpos, double ypos)
+//{
+//	ne_geom::point2D newPosition(xpos, ypos);
+//	ne_geom::point2D offset = newPosition.offset(_mouse.position);
+//
+//	if (_mouse.position.x == _mouse.previous.x)
+//	{
+//		if (offset.x < 0) setPolled(bind(mouse::MOUSE_AXIS_X_LEFT, 0));
+//		else if (offset.x > 0) setPolled(bind(mouse::MOUSE_AXIS_X_RIGHT, 0));
+//	}
+//	else if (_mouse.position.x < _mouse.previous.x)
+//	{
+//		if (offset.x == 0) setHandled(bind(mouse::MOUSE_AXIS_X_LEFT, 0));
+//		else if ()
+//	}
+//
+//
+//	if (_mouse.position == _mouse.previous)
+//	{
+//		if (offset.x < 0) setPolled(bind(mouse::MOUSE_AXIS_X_LEFT, 0));
+//		else if (offset.x > 0) setPolled(bind(mouse::MOUSE_AXIS_X_RIGHT, 0));
+//
+//		if (offset.y > 0) setPolled(bind(mouse::MOUSE_AXIS_Y_UP, 0));
+//		else if (offset.x < 0) setPolled(bind(mouse::MOUSE_AXIS_Y_DOWN, 0));
+//	}
+//	else if (_mouse.position != _mouse.previous)
+//	{
+//		if (offset.x == 0 && _mouse.position.x < _mouse.previous.x) setHandled(bind(mouse::MOUSE_AXIS_X_LEFT, 0));
+//		else if (offset.x == 0 && _mouse.position.x > _mouse.previous.x) setHandled(bind(mouse::MOUSE_AXIS_X_RIGHT, 0));
+//		else if (offset.x != 0)
+//
+//		if (offset.y == 0 && _mouse.position.y > _mouse.previous.y) setHandled(bind(mouse::MOUSE_AXIS_Y_UP, 0));
+//		else if (offset.y == 0 && _mouse.position.y < _mouse.previous.y) setHandled(bind(mouse::MOUSE_AXIS_Y_DOWN, 0));
+//	}
+//
+//	_mouse.previous = _mouse.position;
+//	_mouse.position = newPosition;
+//
+//
+//
+//	_mouse.position = ne_geom::point2D(xpos, ypos);
+//	ne_geom::point2D offset = _mouse.position.offset(_mouse.previous);
+//
+//	if (offset.x < 0) setPolled(bind(mouse::MOUSE_AXIS_X_LEFT, 0));
+//	else if (offset.x > 0) setPolled(bind(mouse::MOUSE_AXIS_X_RIGHT, 0));
+//	else if (offset.x == 0)
+//	{
+//		setHandled(bind(mouse::MOUSE_AXIS_X_LEFT, 0));
+//		setHandled(bind(mouse::MOUSE_AXIS_X_RIGHT, 0));
+//	}
+//
+//	if (offset.y > 0) setPolled(bind(mouse::MOUSE_AXIS_Y_UP, 0));
+//	else if (offset.y < 0) setPolled(bind(mouse::MOUSE_AXIS_Y_DOWN, 0));
+//	else if (offset.y == 0)
+//	{
+//		setHandled(bind(mouse::MOUSE_AXIS_Y_UP, 0));
+//		setHandled(bind(mouse::MOUSE_AXIS_Y_DOWN, 0));
+//	}
+//}
 
 void ne_input::InputController::pollEvents()
 {
@@ -60,7 +101,7 @@ void ne_input::InputController::pollEvents()
 	}
 	_inputEvents = buffer;
 
-	//if (_mouse.previous == _mouse.position)
+	////if (_mouse.previous == _mouse.position)
 
 	inputController.dispatchEvent({}, InputControllerEvent::INPUT_HANDLED);
 }

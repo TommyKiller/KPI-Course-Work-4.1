@@ -9,7 +9,8 @@
 #include "framework/graphics/Model.h"
 #include "framework/actors/Camera.h"
 
-#include "framework/input/InputLayout.h"
+#include "framework/system/Window.h"
+#include "FPSLayout.h"
 
 #include <iostream>
 #include <filesystem>
@@ -55,9 +56,20 @@ int main()
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
     glfwSetCursorPosCallback(window, mouse_callback);
     glfwSetScrollCallback(window, scroll_callback);
+    glfwSetKeyCallback(window, ne_system::Window::keyCallback);
 
     // tell GLFW to capture our mouse
     glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+    // ne_input initialization
+    // -----------------------
+    ne_system::Window::getInstance().keyInput.addEventListener(tk_events::Delegate(&ne_input::InputController::handleInput, &ne_input::InputController::getInstance()), ne_system::WindowKeyInputEvent::WINDOW_KEY_INPUT_POLLED);
+
+    // ne_input::InputLayout creation
+    // ------------------------------
+    ne_input::FPSLayout layout;
+    layout.getAxis(ne_input::FPSLayout::MOVE_FORWARD_AXIS).axis.addEventListener(tk_events::Delegate(&Camera::MoveForward, &camera), ne_input::AxisEvent::AXIS_ALTERED);
+    layout.getAxis(ne_input::FPSLayout::MOVE_RIGHT_AXIS).axis.addEventListener(tk_events::Delegate(&Camera::MoveRight, &camera), ne_input::AxisEvent::AXIS_ALTERED);
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
@@ -95,10 +107,12 @@ int main()
         float currentFrame = glfwGetTime();
         deltaTime = currentFrame - lastFrame;
         lastFrame = currentFrame;
+        camera.deltaTime = deltaTime;
 
         // NEInput
         // -----
         processInput(window);
+        //ne_input::InputController::getInstance().pollEvents();
 
         // render
         // ------

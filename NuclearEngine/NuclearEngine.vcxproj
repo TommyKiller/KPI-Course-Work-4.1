@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\FPSLayout.h" />
     <ClInclude Include="Source\framework\actors\Camera.h" />
     <ClInclude Include="Source\framework\geom\Point2D.h" />
     <ClInclude Include="Source\framework\graphics\Mesh.h" />
@@ -42,6 +43,7 @@
     <ClInclude Include="Source\framework\system\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\FPSLayout.cpp" />
     <ClCompile Include="Source\framework\geom\Point2D.cpp" />
     <ClCompile Include="Source\framework\input\Action.cpp" />
     <ClCompile Include="Source\framework\input\Axis.cpp" />

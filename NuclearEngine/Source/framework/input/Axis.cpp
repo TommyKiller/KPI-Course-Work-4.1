@@ -1,7 +1,7 @@
 #include "Axis.h"
 
 ne_input::Axis::Axis(std::string name, double lowerBound, double upperBound):
-	_name(name), _lowerBound(lowerBound), _upperBound(upperBound), _value(0), _previous(0)
+	_name(name), _lowerBound(lowerBound), _upperBound(upperBound), _value(0.0), _previous(0.0)
 {
 	InputController::getInstance().inputController.addEventListener(tk_events::Delegate(&Axis::pollEvent, this), InputControllerEvent::INPUT_HANDLED);
 }

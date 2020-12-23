@@ -9,8 +9,8 @@
 // Local Headers
 #include "Bind.h"
 #include "HandleState.h"
-#include "events/AxisEvent.h"
 #include "InputController.h"
+#include "events/AxisEvent.h"
 
 // Define Namespace
 namespace ne_input
