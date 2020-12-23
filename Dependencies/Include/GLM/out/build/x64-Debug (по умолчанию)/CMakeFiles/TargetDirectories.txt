@@ -1,0 +1,2 @@
+C:/Users/Nicko/source/repos/TommyKiller/ProjectGuy/Dependencies/Include/GLM/out/build/x64-Debug (по умолчанию)/CMakeFiles/edit_cache.dir
+C:/Users/Nicko/source/repos/TommyKiller/ProjectGuy/Dependencies/Include/GLM/out/build/x64-Debug (по умолчанию)/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\framework">
+      <UniqueIdentifier>{61383c6f-9ead-4684-890c-5ad634cea9be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\framework\actors">
+      <UniqueIdentifier>{4baeed8b-d41e-4ed7-8fe3-cc865d2cf1be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\framework\input">
+      <UniqueIdentifier>{2389ab1d-54cf-457d-93e7-b4c8c97df778}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\framework\graphics">
+      <UniqueIdentifier>{1d3f47b7-0796-4ba7-87d0-dd0b5dac2233}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\framework\system">
+      <UniqueIdentifier>{6e8f6749-6cba-4580-afe1-4677760390b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\framework\geom">
+      <UniqueIdentifier>{8daaaf02-1184-4650-a262-0a483889fa9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\framework">
+      <UniqueIdentifier>{6cde1b6c-5f1a-427a-a636-8329f8ef4bd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\framework\input">
+      <UniqueIdentifier>{652a138b-d553-4b99-b7be-3218528319ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\framework\system">
+      <UniqueIdentifier>{711ec226-2193-4b05-82d0-e116dd0d924f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\framework\actors">
+      <UniqueIdentifier>{72b3eb2e-9b74-4ae5-8e73-a426872777eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\framework\geom">
+      <UniqueIdentifier>{71860e0f-04b2-4cbd-8049-9c698d038b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\framework\graphics">
+      <UniqueIdentifier>{deef2bec-4764-4007-a58f-0c6d44eb877d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\framework\graphics\Mesh.h">
+      <Filter>Файлы заголовков\framework\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\graphics\Model.h">
+      <Filter>Файлы заголовков\framework\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\graphics\Shader.h">
+      <Filter>Файлы заголовков\framework\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\actors\Camera.h">
+      <Filter>Файлы заголовков\framework\actors</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\glad.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\main.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
