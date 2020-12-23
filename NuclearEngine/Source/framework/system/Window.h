@@ -1,0 +1,26 @@
+#ifndef NE_WINDOW_H
+#define NE_WINDOW_H
+#pragma once
+
+// System Headers
+#include <GLFW/glfw3.h>
+
+// Local Headers
+#include "events/WindowKeyInputEvent.h"
+#include "events/WindowAxisInputEvent.h"
+
+// Define Namespace
+namespace ne_system
+{
+	class Window
+	{
+	public:
+		static WindowKeyInputEvent keyInput;
+		static WindowAxisInputEvent axisInput;
+
+		static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
+		static void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
+	};
+} // namespace ne_system
+
+#endif // !NE_WINDOW_H

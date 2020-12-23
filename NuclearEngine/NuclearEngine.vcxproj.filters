@@ -49,6 +49,24 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Файлы заголовков\framework\input\events">
+      <UniqueIdentifier>{a13aeb68-f809-4c0e-9fe6-a7e2c672d173}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\framework\input\events">
+      <UniqueIdentifier>{59546a62-0d79-4073-82d1-e796cfb5a21d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\framework\system\events">
+      <UniqueIdentifier>{82d15012-e7de-49a7-a473-d21afd1fdf56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\framework\system\events">
+      <UniqueIdentifier>{ec3ccb16-6c86-43d0-b24c-5e37ec7a436a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\framework\input\exceptions">
+      <UniqueIdentifier>{01e086c6-b43f-4b84-93e0-1e51fcabb20b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\framework\input\exceptions">
+      <UniqueIdentifier>{d396c7ba-44be-4a1a-9cc5-10d830cf4bb3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\framework\graphics\Mesh.h">
@@ -63,6 +81,57 @@
     <ClInclude Include="Source\framework\actors\Camera.h">
       <Filter>Файлы заголовков\framework\actors</Filter>
     </ClInclude>
+    <ClInclude Include="Source\framework\geom\Point2D.h">
+      <Filter>Файлы заголовков\framework\geom</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\Bind.h">
+      <Filter>Файлы заголовков\framework\input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\HandleState.h">
+      <Filter>Файлы заголовков\framework\input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\events\InputEvent.h">
+      <Filter>Файлы заголовков\framework\input\events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\Mouse.h">
+      <Filter>Файлы заголовков\framework\input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\InputController.h">
+      <Filter>Файлы заголовков\framework\input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\events\InputControllerEvent.h">
+      <Filter>Файлы заголовков\framework\input\events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\system\Window.h">
+      <Filter>Файлы заголовков\framework\system</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\system\events\WindowKeyInputEvent.h">
+      <Filter>Файлы заголовков\framework\system\events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\system\events\WindowAxisInputEvent.h">
+      <Filter>Файлы заголовков\framework\system\events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\Action.h">
+      <Filter>Файлы заголовков\framework\input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\events\ActionEvent.h">
+      <Filter>Файлы заголовков\framework\input\events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\events\AxisEvent.h">
+      <Filter>Файлы заголовков\framework\input\events</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\Axis.h">
+      <Filter>Файлы заголовков\framework\input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\InputLayout.h">
+      <Filter>Файлы заголовков\framework\input</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\exceptions\ActionDoesNotExistException.h">
+      <Filter>Файлы заголовков\framework\input\exceptions</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\framework\input\exceptions\AxisDoesNotExistException.h">
+      <Filter>Файлы заголовков\framework\input\exceptions</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\glad.c">
@@ -70,6 +139,36 @@
     </ClCompile>
     <ClCompile Include="Source\main.cpp">
       <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\framework\geom\Point2D.cpp">
+      <Filter>Исходные файлы\framework\geom</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\framework\input\Bind.cpp">
+      <Filter>Исходные файлы\framework\input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\framework\input\Mouse.cpp">
+      <Filter>Исходные файлы\framework\input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\framework\input\InputController.cpp">
+      <Filter>Исходные файлы\framework\input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\framework\system\Window.cpp">
+      <Filter>Исходные файлы\framework\system</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\framework\input\Action.cpp">
+      <Filter>Исходные файлы\framework\input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\framework\input\Axis.cpp">
+      <Filter>Исходные файлы\framework\input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\framework\input\InputLayout.cpp">
+      <Filter>Исходные файлы\framework\input</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\framework\input\exceptions\ActionDoesNotExistException.cpp">
+      <Filter>Исходные файлы\framework\input\exceptions</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\framework\input\exceptions\AxisDoesNotExistException.cpp">
+      <Filter>Исходные файлы\framework\input\exceptions</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

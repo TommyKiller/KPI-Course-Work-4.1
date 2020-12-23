@@ -9,6 +9,8 @@
 #include "framework/graphics/Model.h"
 #include "framework/actors/Camera.h"
 
+#include "framework/input/InputLayout.h"
+
 #include <iostream>
 #include <filesystem>
 

@@ -1,0 +1,2 @@
+C:/Users/Nicko/source/repos/TommyKiller/KPI-Course-Work-4.1/Dependencies/Include/GLM/out/build/x64-Debug (default)/CMakeFiles/edit_cache.dir
+C:/Users/Nicko/source/repos/TommyKiller/KPI-Course-Work-4.1/Dependencies/Include/GLM/out/build/x64-Debug (default)/CMakeFiles/rebuild_cache.dir

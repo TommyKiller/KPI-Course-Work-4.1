@@ -20,11 +20,38 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\framework\actors\Camera.h" />
+    <ClInclude Include="Source\framework\geom\Point2D.h" />
     <ClInclude Include="Source\framework\graphics\Mesh.h" />
     <ClInclude Include="Source\framework\graphics\Model.h" />
     <ClInclude Include="Source\framework\graphics\Shader.h" />
+    <ClInclude Include="Source\framework\input\Action.h" />
+    <ClInclude Include="Source\framework\input\Axis.h" />
+    <ClInclude Include="Source\framework\input\Bind.h" />
+    <ClInclude Include="Source\framework\input\events\ActionEvent.h" />
+    <ClInclude Include="Source\framework\input\events\AxisEvent.h" />
+    <ClInclude Include="Source\framework\input\events\InputControllerEvent.h" />
+    <ClInclude Include="Source\framework\input\events\InputEvent.h" />
+    <ClInclude Include="Source\framework\input\exceptions\ActionDoesNotExistException.h" />
+    <ClInclude Include="Source\framework\input\exceptions\AxisDoesNotExistException.h" />
+    <ClInclude Include="Source\framework\input\HandleState.h" />
+    <ClInclude Include="Source\framework\input\InputController.h" />
+    <ClInclude Include="Source\framework\input\InputLayout.h" />
+    <ClInclude Include="Source\framework\input\Mouse.h" />
+    <ClInclude Include="Source\framework\system\events\WindowAxisInputEvent.h" />
+    <ClInclude Include="Source\framework\system\events\WindowKeyInputEvent.h" />
+    <ClInclude Include="Source\framework\system\Window.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Source\framework\geom\Point2D.cpp" />
+    <ClCompile Include="Source\framework\input\Action.cpp" />
+    <ClCompile Include="Source\framework\input\Axis.cpp" />
+    <ClCompile Include="Source\framework\input\Bind.cpp" />
+    <ClCompile Include="Source\framework\input\exceptions\ActionDoesNotExistException.cpp" />
+    <ClCompile Include="Source\framework\input\exceptions\AxisDoesNotExistException.cpp" />
+    <ClCompile Include="Source\framework\input\InputController.cpp" />
+    <ClCompile Include="Source\framework\input\InputLayout.cpp" />
+    <ClCompile Include="Source\framework\input\Mouse.cpp" />
+    <ClCompile Include="Source\framework\system\Window.cpp" />
     <ClCompile Include="Source\glad.c" />
     <ClCompile Include="Source\main.cpp" />
   </ItemGroup>
