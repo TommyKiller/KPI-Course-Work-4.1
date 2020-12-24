@@ -16,3 +16,8 @@ void ne_system::Window::cursorPosCallback(GLFWwindow* window, double xpos, doubl
 {
 	ne_system::Window::getInstance().axisInput.dispatchEvent({ xpos, ypos }, WindowAxisInputEvent::WINDOW_AXIS_INPUT_POLLED);
 }
+
+void ne_system::Window::close()
+{
+	glfwSetWindowShouldClose(glfwGetCurrentContext(), true);
+}

@@ -20,6 +20,8 @@ namespace ne_system
 		static void keyCallback(GLFWwindow* window, int key, int scancode, int action, int mods);
 		static void cursorPosCallback(GLFWwindow* window, double xpos, double ypos);
 
+		void close();
+
 		WindowKeyInputEvent keyInput;
 		WindowAxisInputEvent axisInput;
 	};

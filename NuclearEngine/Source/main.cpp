@@ -34,6 +34,9 @@ bool firstMouse = true;
 float deltaTime = 0.0f;
 float lastFrame = 0.0f;
 
+// input layout
+// ne_input::FPSLayout layout;
+
 int main()
 {
     // glfw: initialize and configure
@@ -67,9 +70,17 @@ int main()
 
     // ne_input::InputLayout creation
     // ------------------------------
-    ne_input::FPSLayout layout;
-    layout.getAxis(ne_input::FPSLayout::MOVE_FORWARD_AXIS).axis.addEventListener(tk_events::Delegate(&Camera::MoveForward, &camera), ne_input::AxisEvent::AXIS_ALTERED);
-    layout.getAxis(ne_input::FPSLayout::MOVE_RIGHT_AXIS).axis.addEventListener(tk_events::Delegate(&Camera::MoveRight, &camera), ne_input::AxisEvent::AXIS_ALTERED);
+    //layout.getAxis(ne_input::FPSLayout::MOVE_FORWARD_AXIS).axis.addEventListener(tk_events::Delegate(&Camera::MoveForward, &camera), ne_input::AxisEvent::AXIS_ALTERED);
+    //layout.getAxis(ne_input::FPSLayout::MOVE_RIGHT_AXIS).axis.addEventListener(tk_events::Delegate(&Camera::MoveRight, &camera), ne_input::AxisEvent::AXIS_ALTERED);
+    ne_input::Axis moveForwardAxis("moveForwardAxis");
+    moveForwardAxis.bindTo({ GLFW_KEY_W, 0 }, 1.0).bindTo({ GLFW_KEY_S, 0 }, -1.0);
+    moveForwardAxis.axis.addEventListener(tk_events::Delegate(&Camera::MoveForward, &camera), ne_input::AxisEvent::AXIS_ALTERED);
+    ne_input::Axis moveRightAxis("moveRightAxis");
+    moveRightAxis.bindTo({ GLFW_KEY_D, 0 }, 1.0).bindTo({ GLFW_KEY_A, 0 }, -1.0);
+    moveRightAxis.axis.addEventListener(tk_events::Delegate(&Camera::MoveRight, &camera), ne_input::AxisEvent::AXIS_ALTERED);
+    ne_input::Action exitAction("exitAction");
+    exitAction.bindTo({ GLFW_KEY_ESCAPE, 0 });
+    exitAction.action.addEventListener(tk_events::Delegate(&ne_system::Window::close, &ne_system::Window::getInstance()), ne_input::ActionEvent::ACTION_STARTED);
 
     // glad: load all OpenGL function pointers
     // ---------------------------------------
@@ -111,8 +122,8 @@ int main()
 
         // NEInput
         // -----
-        processInput(window);
-        //ne_input::InputController::getInstance().pollEvents();
+        //processInput(window);
+        ne_input::InputController::getInstance().pollEvents();
 
         // render
         // ------
